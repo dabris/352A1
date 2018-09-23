@@ -1,32 +1,49 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Arrays;
 
 public class A1 {
 	
-	private static int[] oddoNums = {-1,-1,-1};
-	private static int i=oddoNums[0];
-	private static int j=oddoNums[1];
-	private static int k=oddoNums[2];
+	private static int[] oddoNums = {1,1,1};
+	private static int i;
+	private static int j;
+	private static int k;
+	
 
 	public static int[] linearOdd(int x){
 		
-		switch (x) {
-		case 3: oddoNums[2]=1;
-		case 2: oddoNums[1]=1;
-		case 1: oddoNums[0]=1;
+		if(x<=3) {
 		return oddoNums;
-		}
-		
-		if(x<=0) {
-			return oddoNums;
-		}
+		}else {
 		
 			oddoNums=linearOdd(x-1);
-			oddoNums[0]=i+j+k;
-			oddoNums[1]=j+k;
-			oddoNums[2]=j;
+			
+			
+			i=oddoNums[0]+oddoNums[1]+oddoNums[2];
+			j=oddoNums[0];
+			k=oddoNums[1];
+			oddoNums[0]=i;
+			oddoNums[1]=j;
+			oddoNums[2]=k;
 			return oddoNums;
+		}
+		
 		
 	}
 	
+	public static void printX( String x)  {
+		
+		try {
+			PrintWriter pr = new PrintWriter("out.txt");
+		    pr.println(x);
+		}catch(FileNotFoundException e) {
+			e.getMessage();
+		}
+		
+	}
 	
+	public static void main(String args[]) {
+		System.out.println(Arrays.toString(linearOdd(6)));
+	}
 
 }
