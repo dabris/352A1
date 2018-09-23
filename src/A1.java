@@ -5,12 +5,18 @@ import java.util.Arrays;
 public class A1 {
 	
 	private static int[] oddoNums = {1,1,1};
-	private static int i;
+	private static int result;//result stored in this variable
 	private static int j;
 	private static int k;
 	
 
 	public static int[] linearOdd(int x){
+		
+		if(x<=0) {
+			int[] error= {-1};
+			return error;
+					
+		}
 		
 		if(x<=3) {
 		return oddoNums;
@@ -19,10 +25,10 @@ public class A1 {
 			oddoNums=linearOdd(x-1);
 			
 			
-			i=oddoNums[0]+oddoNums[1]+oddoNums[2];
+			result=oddoNums[0]+oddoNums[1]+oddoNums[2];
 			j=oddoNums[0];
 			k=oddoNums[1];
-			oddoNums[0]=i;
+			oddoNums[0]=result;
 			oddoNums[1]=j;
 			oddoNums[2]=k;
 			return oddoNums;
@@ -43,7 +49,7 @@ public class A1 {
 	}
 	
 	public static void main(String args[]) {
-		System.out.println(Arrays.toString(linearOdd(6)));
+		System.out.println(Arrays.toString(linearOdd(-2)));
 	}
 
 }
