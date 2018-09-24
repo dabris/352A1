@@ -4,11 +4,13 @@ import java.util.Arrays;
 
 public class A1 {
 	
+	
 	private static int[] oddoNums = {1,1,1};
 	private static int result;//result stored in this variable
 	private static int j;
 	private static int k;
-	
+	private static double startTime;
+	private static double endTime;
 
 	public static int[] linearOdd(int x){
 		
@@ -37,19 +39,25 @@ public class A1 {
 		
 	}
 	
-	public static void printX( String x)  {
+	
+	
+	public static void main(String args[]) {
+		
+		startTime=System.currentTimeMillis();
+		String a=Arrays.toString(linearOdd(20));
+		endTime=System.currentTimeMillis();
+		
 		
 		try {
-			PrintWriter pr = new PrintWriter("out.txt");
-		    pr.println(x);
+			PrintWriter pr = new PrintWriter("out1.txt");
+		    pr.println(a+" run time:"+(endTime-startTime));
+		    pr.close();
 		}catch(FileNotFoundException e) {
 			e.getMessage();
 		}
 		
-	}
-	
-	public static void main(String args[]) {
-		System.out.println(Arrays.toString(linearOdd(-2)));
+		
+		
 	}
 
 }
