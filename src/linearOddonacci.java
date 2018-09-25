@@ -2,20 +2,20 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-public class A1 {
+public class linearOddonacci {
 	
 	
-	private static int[] oddoNums = {1,1,1};
-	private static int result;//result stored in this variable
-	private static int j;
-	private static int k;
+	private static double[] oddoNums = {1,1,1};
+	private static double result;//result stored in this variable
+	private static double j;
+	private static double k;
 	private static double startTime;
 	private static double endTime;
 
-	public static int[] linearOdd(int x){
+	public static double[] linearOdd(int x){
 		
 		if(x<=0) {
-			int[] error= {-1};
+			double[] error= {-1};
 			return error;
 					
 		}
@@ -42,16 +42,27 @@ public class A1 {
 	
 	
 	public static void main(String args[]) {
+		try {
+			PrintWriter pr = new PrintWriter("out.txt");
+		
+		for(int count=1;count<101;count=count+1) {
 		
 		startTime=System.currentTimeMillis();
-		String a=Arrays.toString(linearOdd(20));
+		String a=Arrays.toString(linearOdd(count));
 		endTime=System.currentTimeMillis();
 		
 		
-		try {
-			PrintWriter pr = new PrintWriter("out1.txt");
-		    pr.println(a+" run time:"+(endTime-startTime));
+		
+		    pr.println("count: "+count+" "+a+" run time:"+(endTime-startTime)+"milliseconds");
+		   //reset value
+		    oddoNums[0]=1;
+		    oddoNums[1]=1;
+		    oddoNums[2]=1;
+		   
+		    if(count==100) {
 		    pr.close();
+		    }
+		  }
 		}catch(FileNotFoundException e) {
 			e.getMessage();
 		}
