@@ -1,0 +1,60 @@
+Oddonacci(5) result: 5.0
+run time:6516.0 nanoseconds
+
+Oddonacci(10) result: 105.0
+run time:1953.0 nanoseconds
+
+Oddonacci(15) result: 2209.0
+run time:2298.0 nanoseconds
+
+Oddonacci(20) result: 46499.0
+run time:2990.0 nanoseconds
+
+Oddonacci(25) result: 978793.0
+run time:3868.0 nanoseconds
+
+Oddonacci(30) result: 2.0603361E7
+run time:4760.0 nanoseconds
+
+Oddonacci(35) result: 4.33695873E8
+run time:5393.0 nanoseconds
+
+Oddonacci(40) result: 9.129195487E9
+run time:8497.0 nanoseconds
+
+Oddonacci(45) result: 1.92167404461E11
+run time:6972.0 nanoseconds
+
+Oddonacci(50) result: 4.045078385041E12
+run time:7694.0 nanoseconds
+
+Oddonacci(55) result: 8.5147942685809E13
+run time:12971.0 nanoseconds
+
+Oddonacci(60) result: 1.792344042191491E15
+run time:10583.0 nanoseconds
+
+Oddonacci(65) result: 3.772841790709216E16
+run time:12309.0 nanoseconds
+
+Oddonacci(70) result: 7.9417426803381274E17
+run time:12255.0 nanoseconds
+
+Oddonacci(75) result: 1.6717180390659348E19
+run time:15072.0 nanoseconds
+
+Oddonacci(80) result: 3.5189269088978724E20
+run time:13875.0 nanoseconds
+
+Oddonacci(85) result: 7.407257863344225E21
+run time:15896.0 nanoseconds
+
+Oddonacci(90) result: 1.559210250015092E23
+run time:6866.0 nanoseconds
+
+Oddonacci(95) result: 3.2821006755859276E24
+run time:1398.0 nanoseconds
+
+Oddonacci(100) result: 6.908744247016933E25
+run time:1465.0 nanoseconds
+

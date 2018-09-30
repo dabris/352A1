@@ -26,10 +26,12 @@ public class linearOddonacci {
 		
 			oddoNums=linearOdd(x-1);
 			
-			
+			//add the previous 3 numbers to obtain the new value
 			result=oddoNums[0]+oddoNums[1]+oddoNums[2];
+			//store the last 2 values into j and k
 			j=oddoNums[0];
 			k=oddoNums[1];
+			//replace the current value with result, and the two previous values with j and k
 			oddoNums[0]=result;
 			oddoNums[1]=j;
 			oddoNums[2]=k;
@@ -45,15 +47,15 @@ public class linearOddonacci {
 		try {
 			PrintWriter pr = new PrintWriter("out.txt");
 		
-		for(int count=1;count<101;count=count+1) {
+		for(int count=5;count<101;count=count+5) {
 		
-		startTime=System.currentTimeMillis();
-		String a=Arrays.toString(linearOdd(count));
-		endTime=System.currentTimeMillis();
+		startTime=System.nanoTime();
+		double a=linearOdd(count)[0];
+		endTime=System.nanoTime();
 		
 		
 		
-		    pr.println("count: "+count+" "+a+" run time:"+(endTime-startTime)+"milliseconds");
+		    pr.println("Oddonacci("+count+") result: "+a+"\nrun time:"+(endTime-startTime)+" nanoseconds\n");
 		   //reset value
 		    oddoNums[0]=1;
 		    oddoNums[1]=1;
